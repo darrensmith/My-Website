@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Contact Me | Darren Smith - Sydney, Australia</title>
+	<title>Skills | Darren Smith - Sydney, Australia</title>
 	<meta name="description" content="Yet Another Responsive Corporate Template">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
@@ -30,10 +30,10 @@
 					<li><a href="https://www.darrensmith.com.au">About</a></li>
 					<li><a href="experience.html">Experience</a></li>
 					<li><a href="references.html">References</a></li>
-					<li><a href="skills.html">Skills</a></li>
+					<li class="current"><a href="skills.html">Skills</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="reports.html">Reports</a></li>
-					<li class="current"><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html">Contact</a></li>
 					<li><a href="https://blog.darrensmith.com.au">Blog</a></li>
 				</ul>
 			</div>
@@ -47,22 +47,12 @@
 
 			<div class="column-container">
 
-				<h3>Contact Me</h3>
+				<h3>My Skills</h3>
 
-				<div class="row">
+				<div class="row" style="margin-bottom:350px;">
 					<div class="column">
 						<blockquote>
-							<p><em>If you would like to contact me, you can do so through LinkedIn. Alternatively - please fill and submit the below form and I'll try and come back to you as soon as possible:</em></p>
-		                    <div id="web-to-lead-form-container">
-		                         <form id="web-to-lead-form">
-		                              <div style="margin-top:20px;">
-		                                   <p><input type="text" style="width:300px; height: 40px; text-align:left; padding-left:20px;" placeholder="Enter your first name" name="firstName" required/></p>
-		                                   <p><input type="text" style="width:300px; height: 40px; text-align:left; padding-left:20px;" placeholder="Enter your email address" name="emailAddress" required/></p>
-		                                   <p><textarea style="width:300px; height:100px; text-align:left; padding-left:20px;" placeholder="Enter your enquiry here" name="description" required></textarea></p>
-		                                   <button style="height: 40px;" type="submit" name="submit">Submit Enquiry</button>
-		                              </div>
-		                         </form>
-		                    </div>
+							<p>Stand by! Darren's Skills page is coming soon.</p>
 						</blockquote>
 					</div>
 				</div>
@@ -73,43 +63,6 @@
 			
 		</div>
 	</section>
-
-  <script type="text/javascript">
-      var webToLeadFormElement = document.getElementById('web-to-lead-form');
-      var webToLeadFormIsSubmitted = false;
-
-      webToLeadFormElement.addEventListener('submit', function (event) {
-          event.preventDefault();
-          if (webToLeadFormIsSubmitted) return;
-          webToLeadFormIsSubmitted = true;
-          webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
-
-          var payloadData = {
-          	  firstName: webToLeadFormElement.firstName.value,
-              emailAddress: webToLeadFormElement.emailAddress.value,
-              description: webToLeadFormElement.description.value
-          };
-
-          // Needed url can be found on Lead Capture detail view.
-          var url = 'https://espocrm.industryswarm.com/api/v1/LeadCapture/f95f7c5a4efd9ef3f0d267bf279fa0ea'; 
-
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST', url, true);
-          xhr.setRequestHeader('Content-Type', 'application/json');
-          xhr.setRequestHeader('Accept', 'application/json');
-          xhr.onreadystatechange = function() {
-              if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                  var containerElement = document.getElementById('web-to-lead-form-container');
-                  containerElement.innerHTML = '<p>Contact Form Submitted Successfully</p>';
-              }
-          }
-          xhr.onerror = function() {
-              webToLeadFormElement.submit.removeAttribute('disabled');
-              webToLeadFormIsSubmitted = false;
-          }
-          xhr.send(JSON.stringify(payloadData));
-      });
-  </script>
 	
 	<footer id="main-footer">
 		<div class="container">
